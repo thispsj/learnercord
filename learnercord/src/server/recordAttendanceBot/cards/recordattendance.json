@@ -1,0 +1,37 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+     "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Record Attendance",
+                    "size":"large",
+                    "weight": "bolder"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Press the button below to record your attendance",
+                    "wrap": true,
+                    "size": "medium"
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Record Attendance",
+                            "data": {
+                                "attendanceMarked": true,
+                                "id": "{{id}}",
+                                "user": "{{user}}"
+                            }
+                        }
+                    ]
+                }
+            ]        }
+     ]
+  }
