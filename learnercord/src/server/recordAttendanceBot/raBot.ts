@@ -8,6 +8,7 @@ import {
   import * as Util from "util";
   import * as debug from "debug";
   import { v4 as uuidgen } from "uuid";
+  import * as fs from "fs";
   import axios from "axios";
   
   const TextEncoder = Util.TextEncoder;
@@ -32,6 +33,8 @@ import {
             Authorization: `Bearer ${accessToken}`,
             "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         };
+        const filePath = "./src/server/recordAttendanceBot/Attendance.xlsx";
+        const fileContent = fs.r
         const response = await axios.put(url, null, { headers });
         const adaptiveCardSource = require("./cards/recordattendance.json");
         let aCJson = JSON.parse(adaptiveCardSource);

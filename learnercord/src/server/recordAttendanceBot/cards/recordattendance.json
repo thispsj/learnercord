@@ -22,12 +22,11 @@
                     "type": "ActionSet",
                     "actions": [
                         {
-                            "type": "Action.Submit",
+                            "type": "invoke",
                             "title": "Record Attendance",
-                            "data": {
+                            "value": {
                                 "attendanceMarked": true,
-                                "id": "{{id}}",
-                                "user": "{{user}}"
+                                "id": "{{id}}"
                             }
                         }
                     ]
